@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2</title>
+    <title>numbers 1 to 10</title>
   </head>
   <body>
-    <!-- Create a webpage that prints the numbers 1 - 10 to the screen -->
     <h1 style="text-align: center;"></h1>
   </body>
   <script>
-    for (var i = 1; i < 11; i++) {
+    for (let i = 1; i < 11; i++) {
       document.querySelector("h1").appendChild(document.createElement("span"));
       if (i == 10) {
         document.querySelectorAll("span")[i - 1].innerHTML = i;
       } else {
         document.querySelectorAll("span")[i - 1].innerHTML = i + ",";
       }
+
+      document.querySelectorAll("span")[i - 1].style.color =
+        "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
     }
   </script>
 </html>
